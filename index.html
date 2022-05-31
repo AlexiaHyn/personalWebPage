@@ -6,29 +6,63 @@
         <meta name = "description" content = "My Personal Profile Page">
         <meta name="viewport" content = "width = device-width, initial-scale = 1.0">
         <link rel = "stylesheet" href = "index.css">
-
-        <style>
-            h1{
-                text-align: center;
-                color: blueviolet;
-            }
-        </style>
     </head>
+
     <body>
         <header>
-            <h1>Hi! My Name is Alexia Huang</h1>
+            <nav>
+                <ul>
+                    <li> <a href="#home"> HOMEPAGE</a> </li>
+                    <li> <a href="#"> My Projects</a> </li>
+                    <li> <a href="#"> My Hobbies </a></li>
+                    <li> <a href="#contact"> Contact Me </a> </li>
+                </ul>
+            </nav>
         </header>
-        <section>
-            <main>
-                <article>
-                    <figure>
-                        <img src="profile_picture.jpg" alt="My HeadShot" width="400" height="400">
+        <div>
+            <section id="home">
+                <article class = "block">
+                    <h1 class="block colunm_block" style="width:100%;">
+                        Hi! I'm Alexia Huang<br/>
+                        <p style="font-size:smaller; font-weight:lighter">My GitHub Account: AlexiaHyn</p>
+                    </h1>
+                    <figure class = "block" style="justify-content:flex-end">
+                        <img src="profile_picture.jpg" alt="My HeadShot" width=500px height: 500px style="border-radius:30% 0 0 30%">
                     </figure>
-                    
                 </article>
-            </main>
-        </section>
-        <footer></footer>
-        
+                
+            </section>
+            <section>
+                <main>
+                    <article class="block colunm_block">
+                        <p>I am a rising Junior at Rice University, <br/>
+                            double-majoring in <b>Computer Science</b> and <b>Visual Art</b>.
+                        </p> 
+                        <P>
+                            I like drawing, singing, stoneskipping, and cooking. <br/>
+                            Currently, I am self-learning to play the guitar.
+                        </P>
+                        
+                    </article>
+                </main>
+            </section>
+        </div>
+        <footer class="block gray" style="justify-content:space-around" id="contact">
+            <table class="gray">
+                <th span="2" style = "font-size: larger;"> Contact Info </th>
+                <tr>
+                    <td>Email:</td>
+                    <td>sunfloweralexia@hotmail.com</td>
+                </tr>
+            </table>
+            <form style="padding: 10px">
+                <label for="lmsg">Leave A Message:</label>
+                <input type = "text" id="lmsg" name = "lmsg"><br/>
+                <input type= "checkbox" id="check" name="check">
+                <label for="check">Check Box</label>
+                <input type ="radio" id="radio" name="radio">
+                <label for = "radio">Radio Box</label>
+            </form>
+        </footer>
     </body>
 </html>
