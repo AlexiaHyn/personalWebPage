@@ -1,0 +1,18 @@
+@keyframes appear-up{
+    from{
+        transform: translateY(3px);
+        opacity: 0;
+    } to {
+        transform: translateY(0px);
+        opacity: 100;
+    }
+
+}
+
+.test-lazy{
+    animation: appear-up 1s linear;
+}
+
+.home-appear{
+    animation: appear-up 1s ease-in-out;
+}

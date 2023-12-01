@@ -1,0 +1,57 @@
+.full-page{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content
+}
+
+.full-height{
+    height: 100%;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-style{
+    background-color: transparent;
+    width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link:focus {
+    color: rgb(179, 179, 179);
+    text-decoration: underline rgb(125, 125, 125);
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgb(125, 125, 125);
+}
+
+
+
+.bg-transblack{
+    background-color: rgba(0, 0, 0, 0.57);
+}
+
+.text-grey{
+    color: rgb(179, 179, 179);
+}
+
+@media screen and (max-width: 768px){
+    .header-style{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+
+.project-intro-frame{
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    max-width: 750px;
+    cursor: pointer;
+}
