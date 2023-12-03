@@ -1,6 +1,6 @@
 @keyframes appear-up{
     from{
-        transform: translateY(3px);
+        transform: translateY(5px);
         opacity: 0;
     } to {
         transform: translateY(0px);
@@ -9,10 +9,25 @@
 
 }
 
+@keyframes late-appear {
+    0%, 50%{
+        opacity: 0;
+    } 100% {
+        opacity: 100;
+    }
+}
+
 .test-lazy{
     animation: appear-up 1s linear;
 }
 
 .home-appear{
     animation: appear-up 1s ease-in-out;
+}
+
+.floral-appear {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation: late-appear 2s ease-in-out;
 }

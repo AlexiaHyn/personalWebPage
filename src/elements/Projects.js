@@ -8,12 +8,14 @@ export default function Projects(props) {
     return (
     <div className='d-flex full-page justify-content-center align-items-center' ref={scrollProject}>
         {props.load && 
-        <div className='home-appear text-white d-flex flex-column align-items-center p-5' style={{visibility: `${props.visible}`}}>
+        <div className='home-appear' style={{visibility: `${props.visible}`}}>
+            <div className='d-flex flex-wrap'>
+                <Project pic={nice} placeholder="NICE project picture" title="NICE" intro = "intro" url="https://riceschedule.com/"/>
+                <Project pic={thresher} placeholder="Thresher project picture" title="The Rice Thresher" intro = "intro" url="https://projects.ricethresher.org/"/>
+            </div>
 
-            <Project pic={nice} placeholder="NICE project picture" title="NICE" intro = "intro" url="https://riceschedule.com/"/>
-            <Project pic={thresher} placeholder="Thresher project picture" title="The Rice Thresher" intro = "intro" url="https://projects.ricethresher.org/"/>
-            
-            </div>}
-        </div>
+           
+        </div>}
+    </div>
     )
 }

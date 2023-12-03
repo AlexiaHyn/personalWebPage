@@ -8,6 +8,10 @@
     height: 100%;
 }
 
+.full-screen-height {
+    height: 100vh;
+}
+
 .full-width{
     width: 100%;
 }
@@ -21,16 +25,22 @@
     width: 100%;
 }
 
+.navbar-nav .nav-item .nav-link {
+    transition: all 0.5s ease;
+}
+
 .navbar-nav .nav-item .nav-link:focus {
-    color: rgb(179, 179, 179);
-    text-decoration: underline rgb(125, 125, 125);
+    color: rgb(16, 16, 16) !important;
+    transform: scale(1.2);
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(125, 125, 125);
+    color: rgb(16, 16, 16) !important;
 }
 
-
+.bg-colorful {
+    background-image: linear-gradient(5deg, white, white, white, white, rgb(255, 237, 200));
+}
 
 .bg-transblack{
     background-color: rgba(0, 0, 0, 0.57);
@@ -47,11 +57,4 @@
         height: 100vh;
     }
 
-}
-
-.project-intro-frame{
-    background-color: rgb(32, 32, 32);
-    border-radius: 10px;
-    max-width: 750px;
-    cursor: pointer;
 }

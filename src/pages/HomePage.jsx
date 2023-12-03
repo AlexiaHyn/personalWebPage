@@ -11,7 +11,13 @@ export default function HomePage() {
   const scrollGallery = useRef(null);
   const scrollProject = useRef(null);
   const scrollContact = useRef(null);
-  const refs=[scrollHome, scrollGallery, scrollProject, scrollContact];
+  const refs=[scrollHome,scrollProject, scrollGallery, scrollContact];
+
+  const navHome = useRef(null);
+  const navGallery = useRef(null);
+  const navProject = useRef(null);
+  const navContact = useRef(null);
+  const navRefs=[navHome, navGallery, navProject, navContact];
 
   const [, startTransition] = useTransition();
 
@@ -27,6 +33,7 @@ export default function HomePage() {
       loads[data] = true;
       setLoads([...loads]);
     });
+    navRefs[data].current.focus();
   };
 
   const onStepExit = ({ data }) => {
@@ -37,10 +44,10 @@ export default function HomePage() {
 
 
   return (
-    <div className='bg-black full-page poppins'>
-      <Navbar refs={refs} visibles={visibles}/>
+    <div className='bg-white full-page poppins'>
+      <Navbar refs={refs} visibles={visibles} navRefs={navRefs}/>
       
-      <Scrollama offset={0.8} onStepEnter={onStepEnter} onStepExit={onStepExit} debug>
+      <Scrollama offset={0.8} onStepEnter={onStepEnter} onStepExit={onStepExit}>
         <Step data={0} key={0}>
           <div>
             {<Home myRef={scrollHome} load={loads[0]} visible = {visibles[0]}/>}
@@ -48,12 +55,12 @@ export default function HomePage() {
         </Step>
         <Step data={1} key={1}>
           <div>
-            {<Gallery myRef={scrollGallery} load={loads[1]} visible = {visibles[1]}/>}
+            {<Projects myRef={scrollProject} load={loads[1]} visible = {visibles[1]}/>}
           </div>
         </Step>
         <Step data={2} key={2}>
           <div>
-            {<Projects myRef={scrollProject} load={loads[2]} visible = {visibles[2]}/>}
+            {<Gallery myRef={scrollGallery} load={loads[2]} visible = {visibles[2]}/>}
           </div>
         </Step>
         <Step data={3} key={3}>
