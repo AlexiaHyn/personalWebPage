@@ -9,7 +9,7 @@ export default function Home(props) {
     <div className='full-page m-0' ref={scrollHome}>
       { props.load &&
         <div style={{visibility: `${props.visible}`}} className="row">
-      <div className='col-md-7 col-12 home-appear' >
+      <div className='col-md-7 col-12 home-appear' style={{zIndex: 1}}>
           <div className='d-flex justify-content-center align-items-center full-height header-style'>
             <div className='bg-light bg-opacity-75 p-5 rounded-2 shadow'>
               <h1 className='mb-3'>
@@ -30,7 +30,7 @@ export default function Home(props) {
           </div>
         </div>
 
-        <div className='col-md-5 col-12 p-0 home-appear d-flex justify-content-end position-relative'>
+        <div className='col-md-5 col-12 p-0 home-appear d-flex justify-content-end position-relative' style={{zIndex: 0}}>
             <img src={pic1} placeholder="floral portrait" className='full-screen-height'/>
             <img src={pic2} placeholder="floral portrait" className='full-screen-height floral-appear'/>
         </div>

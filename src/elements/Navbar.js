@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Navbar(props) {
+  const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg navbar-style fixed-top" data-bs-theme="dark">
   <div className="container-fluid">
@@ -10,16 +12,16 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li className="nav-item me-3">
-          <button ref={props.navRefs[0]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>props.refs[0].current.scrollIntoView()}>Home</button>
+          <button ref={props.navRefs[0]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[0].current.scrollIntoView()}}>Home</button>
         </li>
         <li className="nav-item me-3">
-            <button ref={props.navRefs[1]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>props.refs[1].current.scrollIntoView()}>Projects</button>
+            <button ref={props.navRefs[1]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[1].current.scrollIntoView()}}>Projects</button>
         </li>
         <li className="nav-item me-3">
-            <button ref={props.navRefs[2]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>props.refs[2].current.scrollIntoView()}>Alexia's Gallery</button>
+            <button ref={props.navRefs[2]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[2].current.scrollIntoView()}}>Alexia's Gallery</button>
         </li>
         <li className="nav-item">
-          <button ref={props.navRefs[3]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>props.refs[3].current.scrollIntoView()}>About Me</button>
+          <button ref={props.navRefs[3]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>navigate("/about")}>About Me</button>
         </li>
       </ul>
     </div>

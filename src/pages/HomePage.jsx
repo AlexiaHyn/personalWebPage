@@ -4,24 +4,15 @@ import Navbar from '../elements/Navbar'
 import Home from '../elements/Home';
 import Gallery from '../elements/Gallery';
 import Projects from '../elements/Projects';
-import Contact from '../elements/Contact';
 
-export default function HomePage() {
-  const scrollHome = useRef(null);
-  const scrollGallery = useRef(null);
-  const scrollProject = useRef(null);
-  const scrollContact = useRef(null);
-  const refs=[scrollHome,scrollProject, scrollGallery, scrollContact];
+export default function HomePage(props) {
 
-  const navHome = useRef(null);
-  const navGallery = useRef(null);
-  const navProject = useRef(null);
-  const navContact = useRef(null);
-  const navRefs=[navHome, navGallery, navProject, navContact];
+  const [scrollHome,scrollProject, scrollGallery, scrollContact]=props.refs;
+  const navRefs = props.navRefs;
 
   const [, startTransition] = useTransition();
 
-  const [visibles, setVisibles] = useState([true, false, false, false])
+  const [visibles, setVisibles] = props.visibleControl;
   const [loads, setLoads] = useState(["visible", "hidden", "hidden", "hidden"]);
 
   const onStepEnter = ({ data }) => {
@@ -45,9 +36,9 @@ export default function HomePage() {
 
   return (
     <div className='bg-white full-page poppins'>
-      <Navbar refs={refs} visibles={visibles} navRefs={navRefs}/>
+      {/* <Navbar refs={refs} visibles={visibles} navRefs={navRefs}/> */}
       
-      <Scrollama offset={0.8} onStepEnter={onStepEnter} onStepExit={onStepExit}>
+      <Scrollama offset={0.6} onStepEnter={onStepEnter} onStepExit={onStepExit}>
         <Step data={0} key={0}>
           <div>
             {<Home myRef={scrollHome} load={loads[0]} visible = {visibles[0]}/>}
@@ -63,11 +54,11 @@ export default function HomePage() {
             {<Gallery myRef={scrollGallery} load={loads[2]} visible = {visibles[2]}/>}
           </div>
         </Step>
-        <Step data={3} key={3}>
+        {/* <Step data={3} key={3}>
           <div>
             {<Contact myRef={scrollContact} load={loads[3]} visible = {visibles[3]}/>}
           </div>
-        </Step>
+        </Step> */}
       </Scrollama>
         
     </div>
