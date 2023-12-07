@@ -7,7 +7,7 @@ import Projects from '../elements/Projects';
 
 export default function HomePage(props) {
 
-  const [scrollHome,scrollProject, scrollGallery, scrollContact]=props.refs;
+  const [scrollHome,scrollProject]=props.refs;
   const navRefs = props.navRefs;
 
   const [, startTransition] = useTransition();
@@ -19,7 +19,7 @@ export default function HomePage(props) {
     loads[data] = false;
     setLoads([...loads]);
     startTransition(() => {
-      visibles[data] = "visible";
+      visibles[data] = true;
       setVisibles([...visibles]);
       loads[data] = true;
       setLoads([...loads]);
@@ -28,17 +28,15 @@ export default function HomePage(props) {
   };
 
   const onStepExit = ({ data }) => {
-    console.log("exit")
-    visibles[data] = "hidden";
+    console.log("exit " + data);
+    visibles[data] = false;
     setVisibles([...visibles]);
   };
 
 
   return (
     <div className='bg-white full-page poppins'>
-      {/* <Navbar refs={refs} visibles={visibles} navRefs={navRefs}/> */}
-      
-      <Scrollama offset={0.6} onStepEnter={onStepEnter} onStepExit={onStepExit}>
+      {/* <Scrollama offset={1} onStepEnter={onStepEnter} onStepExit={onStepExit}>
         <Step data={0} key={0}>
           <div>
             {<Home myRef={scrollHome} load={loads[0]} visible = {visibles[0]}/>}
@@ -49,17 +47,14 @@ export default function HomePage(props) {
             {<Projects myRef={scrollProject} load={loads[1]} visible = {visibles[1]}/>}
           </div>
         </Step>
-        <Step data={2} key={2}>
-          <div>
-            {<Gallery myRef={scrollGallery} load={loads[2]} visible = {visibles[2]}/>}
-          </div>
-        </Step>
-        {/* <Step data={3} key={3}>
-          <div>
-            {<Contact myRef={scrollContact} load={loads[3]} visible = {visibles[3]}/>}
-          </div>
-        </Step> */}
-      </Scrollama>
+      </Scrollama> */}
+
+      <div>
+        {<Home myRef={scrollHome} load={loads[0]} visible = {visibles[0]}/>}
+      </div>
+      <div>
+        {<Projects myRef={scrollProject} load={loads[1]} visible = {visibles[1]}/>}
+      </div>
         
     </div>
   )

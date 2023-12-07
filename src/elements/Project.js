@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Project(props) {
   return (
-    <div className='w-100 mb-5'>
+    <div className='w-100 my-5'>
       <div className='p-3 py-4 w-100 d-flex flex-wrap justify-content-center align-items-center'>
         <div style={{maxWidth: "500px", minWidth: "300px"}} className='m-3 position-relative'>
             <h3>{props.year}</h3>

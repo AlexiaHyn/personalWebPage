@@ -1,6 +1,7 @@
 import React from 'react'
 import Project from './Project'
 import nice from "../media/images/nice.png"
+import owlracle from "../media/images/owlracle.png";
 import thresher from "../media/images/thresher.png"
 import niceLogo from "../media/images/NiceLogo.svg";
 import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
@@ -8,7 +9,7 @@ import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
 export default function Projects(props) {
     const scrollProject = props.myRef
     return (
-    <div className='d-flex w-100' ref={scrollProject}>
+    <div className='full-page d-flex' ref={scrollProject}>
         {props.load && 
         <div className='w-100' 
             // style={{visibility: `${props.visible}`}}
@@ -16,7 +17,7 @@ export default function Projects(props) {
             <div className='d-flex flex-wrap w-100'>
                 
 
-                <Project pic={thresher} placeholder="Thresher project picture" 
+                <Project pic={owlracle} placeholder="Owlracle project picture" 
                     title="Owlracle" 
                     intro = "An LLM AI chatbot which helped 1200+ Rice students to select courses and find school events with a user-friendly experience." 
                     url="https://www.owlracle.com/"

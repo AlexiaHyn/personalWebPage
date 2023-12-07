@@ -19,7 +19,7 @@ export default function Navbar(props) {
             <button ref={props.navRefs[1]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[1].current.scrollIntoView()}}>Projects</button>
         </li>
         <li className="nav-item me-3">
-            <button ref={props.navRefs[2]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[2].current.scrollIntoView()}}>Alexia's Gallery</button>
+            <button ref={props.navRefs[2]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/gallery")}}>Alexia's Gallery</button>
         </li>
         <li className="nav-item">
           <button ref={props.navRefs[3]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>navigate("/about")}>About Me</button>
