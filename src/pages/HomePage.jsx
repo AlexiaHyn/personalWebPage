@@ -20,7 +20,7 @@ export default function HomePage(props) {
     setLoads([...loads]);
     startTransition(() => {
       visibles[data] = "visible";
-    setVisibles([...visibles]);
+      setVisibles([...visibles]);
       loads[data] = true;
       setLoads([...loads]);
     });
