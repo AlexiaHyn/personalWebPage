@@ -181,3 +181,15 @@
             transform: translateY(-12px);
     }
 }
+
+
+.dot {
+    width:3vw;
+    height: 3vw;
+    padding: 1.5vw;
+    background-color: black;
+    border-radius: 30px;
+    margin: 3px;
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+}

@@ -1,22 +1,23 @@
 import React from 'react'
-import Project from './Project'
+import Project from '../elements/Project'
 import nice from "../media/images/nice.png"
 import owlracle from "../media/images/owlracle.png";
 import thresher from "../media/images/thresher.png"
 import niceLogo from "../media/images/NiceLogo.svg";
 import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
+import Dots from '../elements/Dots';
 
 export default function Projects(props) {
     const scrollProject = props.myRef
     return (
-    <div className='full-page d-flex' ref={scrollProject}>
-        {props.load && 
-        <div className='w-100' 
-            // style={{visibility: `${props.visible}`}}
+    <div className='full-page m-0' ref={scrollProject}>
+        <div className='w-100'
         >
             <div className='d-flex flex-wrap w-100'>
                 
-
+                <div className='d-flex w-100 justify-content-center mt-5 pt-3'>
+                    <Dots/>
+                </div>
                 <Project pic={owlracle} placeholder="Owlracle project picture" 
                     title="Owlracle" 
                     intro = "An LLM AI chatbot which helped 1200+ Rice students to select courses and find school events with a user-friendly experience." 
@@ -59,7 +60,7 @@ export default function Projects(props) {
             </div>
 
            
-        </div>}
+        </div>
     </div>
     )
 }

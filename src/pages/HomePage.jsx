@@ -3,7 +3,6 @@ import { Scrollama, Step } from 'react-scrollama';
 import Navbar from '../elements/Navbar'
 import Home from '../elements/Home';
 import Gallery from '../elements/Gallery';
-import Projects from '../elements/Projects';
 
 export default function HomePage(props) {
 
@@ -52,10 +51,6 @@ export default function HomePage(props) {
       <div>
         {<Home myRef={scrollHome} load={loads[0]} visible = {visibles[0]}/>}
       </div>
-      <div>
-        {<Projects myRef={scrollProject} load={loads[1]} visible = {visibles[1]}/>}
-      </div>
-        
     </div>
   )
 }

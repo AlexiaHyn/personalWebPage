@@ -16,7 +16,7 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
         <li className="nav-item me-3">
-            <button ref={props.navRefs[1]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/"); props.refs[1].current.scrollIntoView()}}>Projects</button>
+            <button ref={props.navRefs[1]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/projects")}}>Projects</button>
         </li>
         <li className="nav-item me-3">
             <button ref={props.navRefs[2]} className="btn border-0 nav-link text-secondary" aria-current="page" onClick={()=>{navigate("/gallery")}}>Alexia's Gallery</button>

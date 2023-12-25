@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import Navbar from './elements/Navbar';
+import Projects from './pages/Projects';
 import ScrollamaDemo from './elements/TestScrolly';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -30,6 +31,7 @@ function App() {
       <Routes> 
         <Route path='/' element={<HomePage refs = {refs} navRefs = {navRefs} visibleControl={[visibles, setVisibles]}/>} />
         {/* <Route path='/testscrolly' element={<ScrollamaDemo/>}/>     */}
+        <Route path='/projects' element={<Projects/>}/> 
         <Route path='/gallery' element={<GalleryPage/>}/> 
         <Route path='/about' element={<AboutPage/>}/>    
       </Routes>

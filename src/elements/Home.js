@@ -7,8 +7,7 @@ export default function Home(props) {
     const scrollHome = props.myRef
   return (
     <div className='full-page m-0 position-relative' ref={scrollHome}>
-      { props.load &&
-        <div style={{opacity: `${props.visible? 1 : 0}`}} className="row transition-all">
+        <div className="row transition-all">
           <div className='col-md-7 col-12 home-appear' style={{zIndex: 1}}>
             <div className='d-flex justify-content-center align-items-center full-height header-style'>
               <div className='bg-light bg-opacity-75 p-5 rounded-2 shadow '>
@@ -35,8 +34,7 @@ export default function Home(props) {
               <img src={pic2} placeholder="floral portrait" className='full-screen-height floral-appear'/>
           </div>
         </div>
-      }  
-      <div className='bottom-white-transition-border'></div>
+      {/* <div className='bottom-white-transition-border'></div> */}
     </div>
   )
 }
