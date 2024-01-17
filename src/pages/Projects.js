@@ -4,11 +4,14 @@ import Project from '../elements/Project'
 import ProjectRight from '../elements/Project-right';
 import nice from "../media/images/nice.png"
 import owlracle from "../media/images/owlracle.png";
-import thresher from "../media/images/thresher.png"
+import thresher from "../media/images/thresher.png";
+import thresher2 from "../media/images/thresher2.png";
 import niceLogo from "../media/images/NiceLogo.svg";
 import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
 import ora from "../media/images/ora1.png";
-import nebula from "../media/images/nebula1.png";
+import oraLogo from "../media/images/oraLogo.png"
+import nebula1 from "../media/images/nebula2.png";
+import nebula2 from "../media/images/nebula3.png";
 import nebulaLogo from "../media/images/nebulaLogo.png";
 
 
@@ -34,13 +37,14 @@ export default function Projects(props) {
                             {
                             <Project pic={ora} 
                                 placeholder="ORA project picture" 
-                                title="ORA" 
+                                title="AR app aiding firefighters" 
                                 intro = "The award-winning AR app for environment detection and hand-gesture communication to aid firefighters." 
                                 url="https://devpost.com/software/ora"
                                 projectLogo = {
-                                    <></>
+                                    <img src={oraLogo} placeholder="Ora Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 load={loadProjects[0]}
+                                circleBg="rgb(236, 100, 100)"
                                 year = {2023}
                             />
                             }
@@ -67,6 +71,7 @@ export default function Projects(props) {
                                     </div>
                                 }
                                 load={loadProjects[1]}
+                                circleBg="rgb(169, 199, 201)"
                                 year = {2023}
                             />
                             }
@@ -74,8 +79,12 @@ export default function Projects(props) {
                     </Step>
                     <Step data={2} key={2}>
                         <div className='w-100'>
-                            {<Project pic={thresher} placeholder="Thresher project picture" 
-                                title="The Rice Thresher Special Project" 
+                            {<Project 
+                                pic={thresher} 
+                                pic2={thresher2}
+                                circleBg="rgb(189, 88, 217)"
+                                placeholder="Thresher project picture" 
+                                title="Special Stories Project" 
                                 intro = "Designed and built a website for an award-winning, student-run newspaper with 4000+ student readers." 
                                 url="https://projects.ricethresher.org/"
                                 projectLogo = {
@@ -88,8 +97,12 @@ export default function Projects(props) {
                     </Step>
                     <Step data={3} key={3}>
                         <div className='w-100'>
-                            {<ProjectRight pic={nebula} placeholder="Nebula project picture" 
-                                title="2D, RPG game built with Unity" 
+                            {<ProjectRight 
+                                pic={nebula1} 
+                                pic2={nebula2}
+                                circleBg="#6fdbfd"
+                                placeholder="Nebula project picture" 
+                                title="2D, RPG game built with Godot" 
                                 intro = "A 2D RPG game which received 100+ positive feedback in the engaging UI design." 
                                 url="https://youtu.be/UZAZGZRIZkk?si=ajlMsdpdRTLVvEnX"
                                 projectLogo = {
