@@ -71,6 +71,11 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.57);
 }
 
+.bg-light-grey{
+    /* background-color: rgb(240, 236, 235); */
+    background: linear-gradient(187deg, rgb(240, 236, 235),rgb(233, 234, 237), white);
+}
+
 .text-grey{
     color: rgb(179, 179, 179);
 }
@@ -93,3 +98,18 @@ a:hover {
 
 }
 
+
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }

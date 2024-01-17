@@ -162,7 +162,9 @@ export default function Dots() {
                     column.map((val, idx)=>{
                         return(<div key={idx} className='dot' 
                         onMouseOver={()=>{handleHover(rowIdx*colNum + idx, rowIdx)}}
-                        style={{transform: `scale(${sizes[rowIdx*colNum + idx]})`}}
+                        style={{transform: `scale(${sizes[rowIdx*colNum + idx]})`,
+                            opacity: `${sizes[rowIdx*colNum + idx]}`
+                        }}
                         >
                         </div>)
                     })

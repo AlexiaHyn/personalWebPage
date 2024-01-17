@@ -14,24 +14,15 @@ import "./stylings/animations.css"
 
 
 function App() {
-  const scrollHome = useRef(null);
-  const scrollProject = useRef(null);
-  const refs=[scrollHome,scrollProject];
+  const [navIdx, setNavIdx] = useState(0);
 
-  const navHome = useRef(null);
-  const navGallery = useRef(null);
-  const navProject = useRef(null);
-  const navContact = useRef(null);
-  const navRefs=[navHome, navProject, navGallery, navContact];
-
-  const [visibles, setVisibles] = useState([true, false, false, false])
   return (
     <BrowserRouter>
-      <Navbar refs = {refs} navRefs = {navRefs}/>
+      <Navbar navIdx = {navIdx}/>
       <Routes> 
-        <Route path='/' element={<HomePage refs = {refs} navRefs = {navRefs} visibleControl={[visibles, setVisibles]}/>} />
+        <Route path='/' element={<HomePage setNavIdx={setNavIdx}/>} />
         {/* <Route path='/testscrolly' element={<ScrollamaDemo/>}/>     */}
-        <Route path='/projects' element={<Projects/>}/> 
+        {/* <Route path='/projects' element={<Projects/>}/>  */}
         <Route path='/gallery' element={<GalleryPage/>}/> 
         <Route path='/about' element={<AboutPage/>}/>    
       </Routes>

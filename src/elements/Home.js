@@ -1,12 +1,11 @@
 import React from 'react'
-import pic1 from "../media/images/floralportrait2.png"
+import pic1 from "../media/images/floralportrait4.png"
 import pic2 from "../media/images/floralportrait3.png"
 import devpost from "../media/images/devpost.svg";
 
-export default function Home(props) {
-    const scrollHome = props.myRef
+export default function Home() {
   return (
-    <div className='full-page m-0 position-relative' ref={scrollHome}>
+    <div className='full-page m-0 position-relative bg-light-grey'>
         <div className="row transition-all">
           <div className='col-md-7 col-12 home-appear' style={{zIndex: 1}}>
             <div className='d-flex justify-content-center align-items-center full-height header-style'>
