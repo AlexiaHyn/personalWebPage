@@ -18,7 +18,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar navIdx = {navIdx}/>
       <Routes> 
         <Route path='/' element={<HomePage setNavIdx={setNavIdx}/>} />
         {/* <Route path='/testscrolly' element={<ScrollamaDemo/>}/>     */}
@@ -26,6 +25,7 @@ function App() {
         <Route path='/gallery' element={<GalleryPage/>}/> 
         <Route path='/about' element={<AboutPage/>}/>    
       </Routes>
+      <Navbar navIdx = {navIdx}/>
     </BrowserRouter>
   );
 }

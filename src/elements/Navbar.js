@@ -14,7 +14,7 @@ export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-style fixed-top poppins" data-bs-theme="dark">
   <div className="container-fluid">
-    <button className="navbar-toggler text-secondary pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button className="navbar-toggler text-secondary pt-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <i className="bi bi-list-ul text-secondary"></i>
     </button>
       <button ref={navHome} className="btn border-0 text-dark fs-3 fw-bold" 

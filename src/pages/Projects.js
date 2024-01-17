@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { Scrollama, Step } from 'react-scrollama';
 import Project from '../elements/Project'
+import ProjectRight from '../elements/Project-right';
 import nice from "../media/images/nice.png"
 import owlracle from "../media/images/owlracle.png";
 import thresher from "../media/images/thresher.png"
 import niceLogo from "../media/images/NiceLogo.svg";
 import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
 import ora from "../media/images/ora1.png";
-import Dots from '../elements/Dots';
-import Nebula from '../media/videos/Nebula';
+import nebula from "../media/images/nebula1.png";
+import nebulaLogo from "../media/images/nebulaLogo.png";
+
 
 export default function Projects(props) {
     const [loadProjects, setLoads] = useState([false, false, false, false]);
@@ -47,7 +49,7 @@ export default function Projects(props) {
                     <Step data={1} key={1}>
                         <div className='w-100'>
                             {
-                            <Project pic={owlracle} placeholder="Owlracle project picture" 
+                            <ProjectRight pic={owlracle} placeholder="Owlracle project picture" 
                                 title="Owlracle" 
                                 intro = "An LLM AI chatbot which helped 1200+ Rice students to select courses and find school events with a user-friendly experience." 
                                 url="https://www.owlracle.com/"
@@ -79,25 +81,25 @@ export default function Projects(props) {
                                 projectLogo = {
                                     <img src={thresherLogo} placeholder="Thresher project picture" className='w-100 mt-2 mb-3'/>
                                 }
-                                year = {2023}
+                                year = {2022}
                                 load={loadProjects[2]}
                             />}
                         </div>
                     </Step>
-                    {/* <Step data={3} key={3}>
+                    <Step data={3} key={3}>
                         <div className='w-100'>
-                            {<Project pic={thresher} placeholder="Thresher project picture" 
-                                title="The Rice Thresher Special Project" 
-                                intro = "Designed and built a website for an award-winning, student-run newspaper with 4000+ student readers." 
-                                url="https://projects.ricethresher.org/"
+                            {<ProjectRight pic={nebula} placeholder="Nebula project picture" 
+                                title="2D, RPG game built with Unity" 
+                                intro = "A 2D RPG game which received 100+ positive feedback in the engaging UI design." 
+                                url="https://youtu.be/UZAZGZRIZkk?si=ajlMsdpdRTLVvEnX"
                                 projectLogo = {
-                                    <img src={thresherLogo} placeholder="Thresher project picture" className='w-100 mt-2 mb-3'/>
+                                    <img src={nebulaLogo} placeholder="Nebula Logo" className='w-100 mt-2 mb-3'/>
                                 }
-                                year = {2023}
+                                year = {2022}
                                 load={loadProjects[3]}
                             />}
                         </div>
-                    </Step> */}
+                    </Step>
                     
                 </Scrollama>
                 

@@ -48,6 +48,9 @@ a:hover {
 .navbar-style{
     background-color: transparent;
     width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -71,7 +74,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.57);
 }
 
-.bg-light-grey{
+.bg-trans-grey{
     /* background-color: rgb(240, 236, 235); */
     background: linear-gradient(187deg, rgb(240, 236, 235),rgb(233, 234, 237), white);
 }
