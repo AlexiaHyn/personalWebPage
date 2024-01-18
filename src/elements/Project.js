@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Project(props) {
+  const [pageReady, setReady] = useState(false);
+  useEffect(()=>{
+    setReady(true);
+  }, [])
   return (
     <div className='w-100 py-5' style={{backgroundColor:`${props.bgColor? props.bgColor : "#fff"}`, minHeight: "300px"}}>
       {
-        props.load ? 
+        props.load && pageReady ? 
         <div className='p-3 py-4 w-100 d-flex flex-wrap justify-content-center align-items-center appear'
         >
           <div style={{maxWidth: "500px", minWidth: "300px"}} className='m-3 position-relative px-5'>
