@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import {useNavigate} from 'react-router-dom';
 
 export default function Project(props) {
+  const navigate = useNavigate();
   const [pageReady, setReady] = useState(false);
   useEffect(()=>{
     setReady(true);
@@ -16,9 +18,16 @@ export default function Project(props) {
               {props.projectLogo}         
               <h3 className='fw-bold text-secondary mb-4'>{props.title}</h3>
               <p className='mb-4'>{props.intro}</p>
-              <button className='btn btn-dark p-2 px-3'>
-                <a target='_blank' href={props.url}>{"Checkout the Project >>"}</a>
-              </button>
+              {
+                props.navigatePage ?
+                <button className='btn btn-dark p-2 px-3' onClick={()=>navigate(props.navigatePage)}>
+                  {"Checkout the Project >>"}
+                </button>
+                :
+                <button className='btn btn-dark p-2 px-3'>
+                  <a target='_blank' href={props.url}>{"Checkout the Project >>"}</a>
+                </button>
+              }
           </div>
           {
             props.pic2?

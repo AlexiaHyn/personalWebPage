@@ -55,15 +55,26 @@ a:hover {
 
 .navbar-nav .nav-item .nav-link {
     transition: all 0.5s ease;
+    color: inherit;
+    opacity: 0.75;
 }
 
 .navbar-nav .nav-item .nav-link:focus {
-    color: rgb(16, 16, 16) !important;
+    /* color: rgb(16, 16, 16) !important; */
+    opacity: 1 !important;
+    outline: 0 !important;
+    box-shadow: none;
     transform: scale(1.2);
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(16, 16, 16) !important;
+    /* color: rgb(16, 16, 16) !important; */
+    opacity: 1 !important;
+}
+
+.navbar-toggler:focus {
+    outline: 0 !important;
+    box-shadow: none;
 }
 
 .bg-light-orange {
@@ -110,7 +121,7 @@ a:hover {
 
 .project-circle {
     position: absolute;
-    top: -10px;
+    top: -15px;
     left: 10%;
     width: 25vw;
     height: 25vw;
@@ -160,3 +171,11 @@ a:hover {
 
 }
 
+
+/* ora project page */
+.ora-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    filter: blur(2px) brightness(50%);
+}

@@ -5,7 +5,9 @@ import Projects from './Projects';
 
 export default function HomePage(props) {
   useEffect(()=>{
-    props.setNavIdx(0)
+    props.setNavIdx(0);
+    props.setHideNav(false);
+    props.setNavMode("light");
   }, [])
 
   return (

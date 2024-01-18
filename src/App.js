@@ -15,16 +15,16 @@ import "./stylings/animations.css"
 function App() {
   const [navIdx, setNavIdx] = useState(0);
   const [hideNav, setHideNav] = useState(false);
-
+  const [navMode, setNavMode] = useState("light");
   return (
     <BrowserRouter>
       <Routes> 
-        <Route path='/' element={<HomePage setNavIdx={setNavIdx}/>} />
-        <Route path='/gallery' element={<GalleryPage/>}/> 
-        <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/project-ora' element={<OraPage/>}/>        
+        <Route path='/' element={<HomePage setNavIdx={setNavIdx} setHideNav={setHideNav} setNavMode={setNavMode}/>} />
+        <Route path='/gallery' element={<GalleryPage setHideNav={setHideNav}/>} /> 
+        <Route path='/about' element={<AboutPage setHideNav={setHideNav}/>} />
+        <Route path='/project-ora' element={<OraPage setHideNav={setHideNav} setNavMode={setNavMode}/>} />        
       </Routes>
-      <Navbar navIdx = {navIdx} hideNav = {hideNav}/>
+      <Navbar navIdx = {navIdx} hideNav = {hideNav} navMode={navMode}/>
     </BrowserRouter>
   );
 }

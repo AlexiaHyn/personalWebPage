@@ -40,6 +40,7 @@ export default function Projects(props) {
                                 title="AR app aiding firefighters" 
                                 intro = "The award-winning AR app for environment detection and hand-gesture communication to aid firefighters." 
                                 url="https://devpost.com/software/ora"
+                                // navigatePage = {"/project-ora"}
                                 projectLogo = {
                                     <img src={oraLogo} placeholder="Ora Logo" className='w-100 mt-2 mb-3'/>
                                 }
