@@ -32,6 +32,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.font-sm {
+    font-size: small;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -207,4 +211,16 @@ a:hover {
 }
 .image-roll-wrapper:hover .image-roll-cover {
     top: 0px;
+}
+
+/* Gallery */
+.gallery-image-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 5px;
+    height: fit-content;
+}
+
+.gallery-image-text {
+    padding: 15px;
 }

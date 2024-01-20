@@ -31,13 +31,13 @@ export default function Project(props) {
           </div>
           {
             props.pic2?
-            <div style={{maxWidth: "500px", minWidth: "300px"}} className='position-relative mx-5 my-3'>
+            <div style={{maxWidth: "500px", minWidth: "300px"}} className='position-relative mx-5 my-3 appear'>
               <div className='project-circle' style={{backgroundColor: `${props.circleBg}`}}></div>
               <img src={props.pic} placeholder={props.placeholder} className='w-75 project-pic1 rounded-3 shadow'/>
               <img src={props.pic2} placeholder={props.placeholder} className='w-75 project-pic2 rounded-3 shadow'/>
             </div>
             :
-            <div style={{maxWidth: "500px", minWidth: "300px"}} className='position-relative mx-5 my-3'>
+            <div style={{maxWidth: "500px", minWidth: "300px"}} className='position-relative mx-5 my-3 appear'>
                 <div className='project-circle' style={{backgroundColor: `${props.circleBg}`}}></div>
                 <img src={props.pic} placeholder={props.placeholder} className='w-100 position-relative shadow rounded-3 mt-5'/>
             </div>
