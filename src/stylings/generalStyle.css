@@ -94,6 +94,10 @@ a:hover {
     color: rgb(179, 179, 179);
 }
 
+.text-green {
+    color: rgba(0, 255, 17);
+}
+
 .bottom-white-transition-border {
     position: absolute;
     bottom: 0px;
@@ -178,4 +182,29 @@ a:hover {
     top: 0px;
     left: 0px;
     filter: blur(2px) brightness(50%);
+}
+
+.image-roll-cover {
+    width: 100%;
+    min-height: 300px;
+    background-color: rgba(0, 255, 17, 0.188);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: -100%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    padding: 25px;
+    transition: all 0.5s ease-out;
+}
+
+.image-roll-wrapper {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.image-roll-wrapper:hover .image-roll-cover {
+    top: 0px;
 }

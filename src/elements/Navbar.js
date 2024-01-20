@@ -17,7 +17,7 @@ export default function Navbar(props) {
       <div className="container-fluid">
         <button className="navbar-toggler text-opacity-75 pt-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" 
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
         </button>
         <button className="btn border-0 fs-3 fw-bold"
           aria-current="page" onClick={()=>{navigate("/"); navHome.current.focus()}}>
