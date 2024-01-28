@@ -127,36 +127,84 @@ a:hover {
     position: absolute;
   }
 
+.project-circle-wrapper {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .project-circle {
-    position: absolute;
-    top: -15px;
-    left: 10%;
+    position: relative;
     width: 25vw;
     height: 25vw;
-    padding: 200px;
-    border-radius: 200px;
+    padding: 13vw;
+    border-radius: 13vw;
+}
+
+.project-1pic-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-2pic-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-2pic-wrapper-inner {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-pic1 {
     position: relative;
-    left: 0px;
-    top: 25px;
+    top: 20px;
 }
 .project-pic2 {
     position: relative;
-    right: -120px;
-    top: -5px;
+    top: -20px;
+    align-self: flex-end;
 }
 
 .project-pic1-right {
     position: relative;
-    left: 120px;
-    top: 25px;
+    align-self: flex-end;
+    top: 20px;
 }
 .project-pic2-right {
     position: relative;
-    left: 0px;
     top: -20px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .project-circle {
+        position: relative;
+        min-width: 40vw;
+        min-height: 40vw;
+        padding: 20vw;
+        border-radius: 20vw;
+    }
+    
 }
 
 @media screen and (max-width: 768px){
@@ -167,17 +215,14 @@ a:hover {
     }
 
     .project-circle {
-        position: absolute;
-        top: 10px;
-        left: 18%;
-        min-width: 250px;
-        min-height: 250px;
-        padding: 125px;
-        border-radius: 125px;
+        position: relative;
+        min-width: 60vw;
+        min-height: 60vw;
+        padding: 30vw;
+        border-radius: 30vw;
     }
-    
-
 }
+
 
 
 /* ora project page */
