@@ -20,7 +20,7 @@ export default function Home() {
                 <h1 className='mb-3'>
                   Alexia Yuening Huang
                 </h1>
-                <h5 className='text-dark text-opacity-75 mb-3'>Frontend Developer | UX Designer | Artist</h5>
+                <h5 className='text-dark text-opacity-75 mb-3'>iOS Developer | full-stack software developer | Artist</h5>
                 <div className='d-flex justify-content-start align-items-center'>
                   <a target='_blank' href='https://www.linkedin.com/in/alexia-yuening-huang' className='me-2'>
                     <i className="bi bi-linkedin text-dark fs-4"></i>
