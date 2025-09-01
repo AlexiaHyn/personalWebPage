@@ -57,7 +57,7 @@ export default function Projects(props) {
                             <ProjectRight pic={owlracle} placeholder="Owlracle project picture" 
                                 title="Owlracle" 
                                 intro = "An LLM AI chatbot which helped 1200+ Rice students to select courses and find school events with a user-friendly experience." 
-                                url="https://www.owlracle.com/"
+                                url="https://github.com/Mr-Ye-Cao/Owlracle?tab=readme-ov-file#documentation"
                                 projectLogo = {
                                     <div className='d-flex justify-content-center position-relative'>
                                         <div className='signin-ball-wrapper'>
