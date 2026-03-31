@@ -2,11 +2,9 @@ import React, { useState } from 'react'
 import { Scrollama, Step } from 'react-scrollama';
 import Project from '../elements/Project'
 import ProjectRight from '../elements/Project-right';
-import nice from "../media/images/nice.png"
 import owlracle from "../media/images/owlracle.png";
 import thresher from "../media/images/thresher.png";
 import thresher2 from "../media/images/thresher2.png";
-import niceLogo from "../media/images/NiceLogo.svg";
 import thresherLogo from "../media/images/the-rice-thresher-logo.gif"
 import ora from "../media/images/ora1.png";
 import oraLogo from "../media/images/oraLogo.png"
@@ -43,7 +41,7 @@ export default function Projects(props) {
                                 intro="A generative card game engine that produces fully playable multiplayer games in seconds."
                                 url="https://devpost.com/software/boardify"
                                 projectLogo={
-                                    <img src={boardifyLogo} placeholder="Boardify Logo" className='w-100 mt-2 mb-3'/>
+                                    <img src={boardifyLogo} alt="Boardify Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 load={loadProjects[0]}
                                 circleBg="rgb(255, 165, 70)"
@@ -62,7 +60,7 @@ export default function Projects(props) {
                                 url="https://devpost.com/software/ora"
                                 navigatePage = {"/project-ora"}
                                 projectLogo = {
-                                    <img src={oraLogo} placeholder="Ora Logo" className='w-100 mt-2 mb-3'/>
+                                    <img src={oraLogo} alt="Ora Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 load={loadProjects[1]}
                                 circleBg="rgb(236, 100, 100)"
@@ -109,7 +107,7 @@ export default function Projects(props) {
                                 intro = "Designed and built a website for an award-winning, student-run newspaper with 4000+ student readers." 
                                 url="https://projects.ricethresher.org/"
                                 projectLogo = {
-                                    <img src={thresherLogo} placeholder="Thresher project picture" className='w-100 mt-2 mb-3'/>
+                                    <img src={thresherLogo} alt="The Rice Thresher Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 year = {2022}
                                 load={loadProjects[3]}
@@ -127,7 +125,7 @@ export default function Projects(props) {
                                 intro = "A 2D RPG game which received 100+ positive feedback in the engaging UI design." 
                                 url="https://youtu.be/UZAZGZRIZkk?si=ajlMsdpdRTLVvEnX"
                                 projectLogo = {
-                                    <img src={nebulaLogo} placeholder="Nebula Logo" className='w-100 mt-2 mb-3'/>
+                                    <img src={nebulaLogo} alt="Nebula Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 year = {2022}
                                 load={loadProjects[4]}

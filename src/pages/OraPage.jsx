@@ -29,7 +29,7 @@ export default function OraPage(props) {
       {
         ready ?
         <>
-        <img src={oraBg} placeholder='firefighters saving forest fires' className='w-100 ora-bg'/>
+        <img src={oraBg} alt="firefighters saving forest fires" className='w-100 ora-bg'/>
         <div className='d-flex flex-column w-100 align-items-center p-5 position-relative'>
           <div className='m-5 shadow rounded-3 p-0' style={{overflow: "hidden"}}>
             <Ora/>
@@ -87,21 +87,21 @@ export default function OraPage(props) {
                 <>
                 <div className='d-flex flex-wrap justify-content-center w-100 my-5 appear'>
                   <div className='image-roll-wrapper'>
-                    <img src={ora2} placeholder='ora project pictures' style={{maxHeight: "300px"}}/>
+                    <img src={ora2} alt="ORA project screenshot" style={{maxHeight: "300px"}}/>
                     <div className='image-roll-cover'>
                       I integrated Ultraleap’s hand-gesture recognition technology to recognize communication meanings represented by given hand gestures. 
                     </div>
                   </div>
 
                   <div className='image-roll-wrapper'>
-                    <img src={ora3} placeholder='ora project pictures' style={{maxHeight: "300px"}}/>
+                    <img src={ora3} alt="ORA project screenshot" style={{maxHeight: "300px"}}/>
                     <div className='image-roll-cover'>
                       The combination of hand-gesture recognition technology and Meta's Mesh API and Depth API enabled realistic, real-time interaction of hand-gesture-triggered water particles within the passthrough environment. 
                     </div>
                   </div>
 
                   <div className='image-roll-wrapper'>
-                    <img src={ora4} placeholder='ora project pictures' style={{maxHeight: "300px"}}/>
+                    <img src={ora4} alt="ORA project screenshot" style={{maxHeight: "300px"}}/>
                     <div className='image-roll-cover'>
                       Additionally, I focused on simulating an infrared camera effect and created dynamic fire particle effects to augment the app's immersive experience.
                     </div>
@@ -134,7 +134,7 @@ export default function OraPage(props) {
                 <div className='fw-bold text-white text-opacity-50 my-4'>--------------- · ---------------</div>
                 <div className='d-flex my-4 appear'>
                   <div className='text-white text-opacity-75'>Want to know more? <br/> Check out our Devpost page.</div>
-                  <button className='btn btn-light btn-large mx-3'><a target='_blank' href='https://devpost.com/software/ora'>{"Devpost >>"}</a></button>
+                  <button className='btn btn-light btn-large mx-3'><a target='_blank' rel='noreferrer' href='https://devpost.com/software/ora'>{"Devpost >>"}</a></button>
                 </div>    
                 </>
                 :
