@@ -20,14 +20,22 @@ export default function Home() {
                 <h1 className='mb-3'>
                   Alexia Yuening Huang
                 </h1>
-                <h5 className='text-dark text-opacity-75 mb-3'>iOS Developer | full-stack software developer | Artist</h5>
+                <h5 className='text-dark text-opacity-75 mb-3'>iOS Developer | full-stack SWE | MLE | Artist</h5>
                 <div className='d-flex justify-content-start align-items-center'>
                   <a target='_blank' href='https://www.linkedin.com/in/alexia-yuening-huang' className='me-2'>
                     <i className="bi bi-linkedin text-dark fs-4"></i>
                   </a>
                   
-                  <a target='_blank' href='https://devpost.com/AlexiaHuang'>
+                  <a target='_blank' href='https://devpost.com/AlexiaHuang' className='me-2'>
                     <img src={devpost} placeholder='devpost' style={{width: "27px"}}/>
+                  </a>
+
+                  <a target='_blank' href='https://github.com/AlexiaHyn' className='me-2'>
+                    <i className="bi bi-github text-dark fs-4"></i>
+                  </a>
+
+                  <a target='_blank' href='/resume.pdf'>
+                    Resume
                   </a>
                   
                 </div>
@@ -39,6 +47,9 @@ export default function Home() {
               <img src={pic1} placeholder="floral portrait" className='full-screen-height'/>
               <img src={pic2} placeholder="floral portrait" className='full-screen-height floral-appear'/>
           </div>
+        </div>
+        <div className='scroll-down-indicator' onClick={()=>document.getElementById('about')?.scrollIntoView({behavior:'smooth'})}>
+          <i className="bi bi-chevron-double-down"></i>
         </div>
         <div className='bottom-white-transition-border'></div>
         </>

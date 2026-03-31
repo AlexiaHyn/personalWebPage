@@ -1,6 +1,7 @@
 import React, { useEffect} from 'react'
 import Navbar from '../elements/Navbar'
 import Home from '../elements/Home';
+import Contact from '../elements/Contact';
 import Projects from './Projects';
 
 export default function HomePage(props) {
@@ -14,7 +15,12 @@ export default function HomePage(props) {
     <div className='bg-white full-page poppins'>
       <div>
         <Home/>
-        <Projects/>
+        <div id="about">
+          <Contact/>
+        </div>
+        <div id="projects">
+          <Projects/>
+        </div>
       </div>
     </div>
   )

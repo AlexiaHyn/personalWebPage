@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import Navbar from './elements/Navbar';
 import OraPage from './pages/OraPage';
@@ -21,8 +20,7 @@ function App() {
       <Routes> 
         <Route path='/' element={<HomePage setNavIdx={setNavIdx} setHideNav={setHideNav} setNavMode={setNavMode}/>} />
         <Route path='/gallery' element={<GalleryPage setHideNav={setHideNav}/>} /> 
-        <Route path='/about' element={<AboutPage setHideNav={setHideNav}/>} />
-        <Route path='/project-ora' element={<OraPage setHideNav={setHideNav} setNavMode={setNavMode}/>} />        
+<Route path='/project-ora' element={<OraPage setHideNav={setHideNav} setNavMode={setNavMode}/>} />        
       </Routes>
       <Navbar navIdx = {navIdx} hideNav = {hideNav} navMode={navMode}/>
     </BrowserRouter>

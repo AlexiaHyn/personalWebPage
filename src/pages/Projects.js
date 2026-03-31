@@ -13,10 +13,12 @@ import oraLogo from "../media/images/oraLogo.png"
 import nebula1 from "../media/images/nebula2.png";
 import nebula2 from "../media/images/nebula3.png";
 import nebulaLogo from "../media/images/nebulaLogo.png";
+import boardify from "../media/images/boardify.png";
+import boardifyLogo from "../media/images/boardify_logo.png";
 
 
 export default function Projects(props) {
-    const [loadProjects, setLoads] = useState([false, false, false, false]);
+    const [loadProjects, setLoads] = useState([false, false, false, false, false]);
     const onStepEnter = ({ data }) => {
         loadProjects[data] = true;
         setLoads([...loadProjects]);
@@ -35,7 +37,25 @@ export default function Projects(props) {
                     <Step data={0} key={0}>
                         <div className='w-100'>
                             {
-                            <Project pic={ora} 
+                            <Project pic={boardify}
+                                placeholder="Boardify project picture"
+                                title="AI-powered game engine"
+                                intro="A generative card game engine that produces fully playable multiplayer games in seconds."
+                                url="https://devpost.com/software/boardify"
+                                projectLogo={
+                                    <img src={boardifyLogo} placeholder="Boardify Logo" className='w-100 mt-2 mb-3'/>
+                                }
+                                load={loadProjects[0]}
+                                circleBg="rgb(255, 165, 70)"
+                                year={2026}
+                            />
+                            }
+                        </div>
+                    </Step>
+                    <Step data={1} key={1}>
+                        <div className='w-100'>
+                            {
+                            <ProjectRight pic={ora}
                                 placeholder="ORA project picture" 
                                 title="AR app aiding firefighters" 
                                 intro = "The award-winning AR app for environment detection and hand-gesture communication to aid firefighters." 
@@ -44,20 +64,20 @@ export default function Projects(props) {
                                 projectLogo = {
                                     <img src={oraLogo} placeholder="Ora Logo" className='w-100 mt-2 mb-3'/>
                                 }
-                                load={loadProjects[0]}
+                                load={loadProjects[1]}
                                 circleBg="rgb(236, 100, 100)"
                                 year = {2023}
                             />
                             }
                         </div>
                     </Step>
-                    <Step data={1} key={1}>
+                    <Step data={2} key={2}>
                         <div className='w-100'>
                             {
-                            <ProjectRight pic={owlracle} placeholder="Owlracle project picture" 
+                            <Project pic={owlracle} placeholder="Owlracle project picture" 
                                 title="Owlracle" 
                                 intro = "An LLM AI chatbot which helped 1200+ Rice students to select courses and find school events with a user-friendly experience." 
-                                url="https://github.com/Mr-Ye-Cao/Owlracle?tab=readme-ov-file#documentation"
+                                url="https://github.com/Open-Nice/Owlracle"
                                 projectLogo = {
                                     <div className='d-flex justify-content-center position-relative'>
                                         <div className='signin-ball-wrapper'>
@@ -71,16 +91,16 @@ export default function Projects(props) {
                                         </div>
                                     </div>
                                 }
-                                load={loadProjects[1]}
+                                load={loadProjects[2]}
                                 circleBg="rgb(169, 199, 201)"
                                 year = {2023}
                             />
                             }
                         </div>
                     </Step>
-                    <Step data={2} key={2}>
+                    <Step data={3} key={3}>
                         <div className='w-100'>
-                            {<Project 
+                            {<ProjectRight
                                 pic={thresher} 
                                 pic2={thresher2}
                                 circleBg="rgb(189, 88, 217)"
@@ -92,13 +112,13 @@ export default function Projects(props) {
                                     <img src={thresherLogo} placeholder="Thresher project picture" className='w-100 mt-2 mb-3'/>
                                 }
                                 year = {2022}
-                                load={loadProjects[2]}
+                                load={loadProjects[3]}
                             />}
                         </div>
                     </Step>
-                    <Step data={3} key={3}>
+                    <Step data={4} key={4}>
                         <div className='w-100'>
-                            {<ProjectRight 
+                            {<Project
                                 pic={nebula1} 
                                 pic2={nebula2}
                                 circleBg="#6fdbfd"
@@ -110,11 +130,11 @@ export default function Projects(props) {
                                     <img src={nebulaLogo} placeholder="Nebula Logo" className='w-100 mt-2 mb-3'/>
                                 }
                                 year = {2022}
-                                load={loadProjects[3]}
+                                load={loadProjects[4]}
                             />}
                         </div>
                     </Step>
-                    
+
                 </Scrollama>
                 
             </div>
