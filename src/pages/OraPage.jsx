@@ -7,16 +7,16 @@ import ora4 from "../media/images/ora4.png";
 import oraBg from "../media/images/oraBg.png";
 
 
-export default function OraPage(props) {
+export default function OraPage({ setHideNav, setNavMode }) {
   const [load, setLoads] = useState([false, false, false, false])
   const [ready, setReady] = useState(false);
   useEffect(()=>{
     window.scrollTo(0, 0);
-    props.setHideNav(true);
-    props.setNavMode("dark");
+    setHideNav(true);
+    setNavMode("dark");
     setLoads([false, false, false, false]);
     setReady(true);
-  }, [])
+  }, [setHideNav, setNavMode])
 
   const onStepEnter = ({ data }) => {
     console.log(data)
