@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import HomePage from './pages/HomePage';
 import GalleryPage from './pages/GalleryPage';

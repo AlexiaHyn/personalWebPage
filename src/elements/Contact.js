@@ -1,5 +1,4 @@
 import React from 'react'
-import devpost from "../media/images/devpost.svg"
 import selfPic from "../media/images/self-portrait.jpg"
 
 export default function Contact() {
@@ -8,7 +7,7 @@ export default function Contact() {
       <div className='home-appear text-dark' >
         <div className='d-flex flex-wrap justify-content-center align-items-center'>
           <div className='rounded-5 mx-3 my-5' style={{width: "20vw", minWidth: "350px", overflow: "hidden"}}>
-            <img src={selfPic} placeholder='self portrait' className='w-100'/>
+            <img src={selfPic} alt='self portrait' className='w-100'/>
           </div>
           
           <div className='m-5'>
@@ -28,7 +27,7 @@ export default function Contact() {
               As both an engineer and an artist, I thrive on exploring <b>environment and technology</b> to build a more impactful future.
               </p >
             </div>
-            <div className='mb-3'>Feel free to reach out through <b>yueningh@stanford.edu</b> or <a className='text-dark fw-bold' target='_blank' href='https://www.linkedin.com/in/alexia-yuening-huang'>LinkedIn</a>.</div>
+            <div className='mb-3'>Feel free to reach out through <b>yueningh@stanford.edu</b> or <a className='text-dark fw-bold' target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/alexia-yuening-huang'>LinkedIn</a>.</div>
           </div>
         </div>
         
