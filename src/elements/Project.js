@@ -25,7 +25,7 @@ export default function Project(props) {
                 </button>
                 :
                 <button className='btn btn-dark p-2 px-3'>
-                  <a target='_blank' href={props.url}>{"Checkout the Project >>"}</a>
+                  <a target='_blank' rel='noreferrer' href={props.url}>{"Checkout the Project >>"}</a>
                 </button>
               }
           </div>
@@ -39,14 +39,14 @@ export default function Project(props) {
                 <div className='project-2pic-wrapper-inner'>
                   <div className='w-75 project-pic1 position-relative'>
                     {!imgReady && <div className='img-skeleton rounded-3 position-absolute' style={{inset:0, minHeight:'160px'}}/>}
-                    <img src={props.pic} placeholder={props.placeholder}
+                    <img src={props.pic} alt={props.placeholder}
                       style={{opacity: imgReady?1:0, transition:'opacity 0.3s ease'}}
                       className='w-100 rounded-3 shadow appear'
                       loading="lazy"/>
                   </div>
                   <div className='w-75 project-pic2 position-relative'>
                     {!imgReady && <div className='img-skeleton rounded-3 position-absolute' style={{inset:0, minHeight:'160px'}}/>}
-                    <img src={props.pic2} placeholder={props.placeholder}
+                    <img src={props.pic2} alt={props.placeholder}
                       ref={lastImgRef}
                       style={{opacity: imgReady?1:0, transition:'opacity 0.3s ease'}}
                       className='w-100 rounded-3 shadow appear'
@@ -64,7 +64,7 @@ export default function Project(props) {
               <div className='project-1pic-wrapper'>
                 <div className='position-relative' style={{width:'80%'}}>
                   {!imgReady && <div className='img-skeleton rounded-3 position-absolute' style={{inset:0, minHeight:'200px'}}/>}
-                  <img src={props.pic} placeholder={props.placeholder}
+                  <img src={props.pic} alt={props.placeholder}
                     ref={lastImgRef}
                     style={{opacity: imgReady?1:0, transition:'opacity 0.3s ease'}}
                     className='w-100 shadow rounded-3 appear'

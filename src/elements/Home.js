@@ -22,19 +22,19 @@ export default function Home() {
               </h1>
               <h5 className='text-dark text-opacity-75 mb-3'>iOS Developer | full-stack SWE | MLE | Artist</h5>
               <div className='d-flex justify-content-start align-items-center'>
-                <a target='_blank' href='https://www.linkedin.com/in/alexia-yuening-huang' className='me-2'>
+                <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/alexia-yuening-huang' className='me-2'>
                   <i className="bi bi-linkedin text-dark fs-4"></i>
                 </a>
 
-                <a target='_blank' href='https://devpost.com/AlexiaHuang' className='me-2'>
-                  <img src={devpost} placeholder='devpost' style={{width: "27px"}}/>
+                <a target='_blank' rel='noreferrer' href='https://devpost.com/AlexiaHuang' className='me-2'>
+                  <img src={devpost} alt='devpost' style={{width: "27px"}}/>
                 </a>
 
-                <a target='_blank' href='https://github.com/AlexiaHyn' className='me-2'>
+                <a target='_blank' rel='noreferrer' href='https://github.com/AlexiaHyn' className='me-2'>
                   <i className="bi bi-github text-dark fs-4"></i>
                 </a>
 
-                <a target='_blank' href='/resume.pdf'>
+                <a target='_blank' rel='noreferrer' href='/resume.pdf'>
                   Resume
                 </a>
 
@@ -44,11 +44,11 @@ export default function Home() {
         </div>
 
         <div className={`col-md-5 col-12 p-0 ${imgReady ? 'home-appear' : ''} d-flex justify-content-end position-relative`} style={{zIndex: 0}}>
-          <img src={pic1} placeholder="floral portrait" className='full-screen-height'/>
+          <img src={pic1} alt="floral portrait" className='full-screen-height'/>
           <img
             src={pic2}
             ref={pic2Ref}
-            placeholder="floral portrait"
+            alt="floral portrait"
             className={`full-screen-height${imgReady ? ' floral-appear' : ''}`}
             style={imgReady ? {} : {opacity: 0}}
             onLoad={() => setImgReady(true)}
